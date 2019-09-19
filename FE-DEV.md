@@ -13,19 +13,19 @@ give less than what you can really deliver
 
 
 ## Index
-- Names
-- Numbers
-- Always handle exceptions
-- Safely dealing with values
-- Components
-- Functions with one purpose
-- Indentation / code-style
-- Do not abuse inlining
-- Linters / warnings
-- Read the documentation
-- Cleaning ourselves up
-- Conlusion
-- Contributing to this document
+- [Names](#names)
+- [Numbers](#numbers)
+- [Always handle exceptions](#always-handle-exceptions)
+- [Safely dealing with values](#safely-dealing-with-values)
+- [Components](#components)
+- [Functions with one purpose](#functions-with-one-purpose)
+- [Indentation / code-style](#indentation--code-style)
+- [Do not abuse inlining](#do-not-abuse-inlining)
+- [Linters / warnings](#-linters--warnings)
+- [Read the documentation](#-read-the-documentation)
+- [Cleaning ourselves up](#-cleaning-ourselves-up)
+- [Conclusion](#%EF%B8%8F-conclusion)
+- [Contributing to this document](#-contributing-to-this-document)
 
 
 
@@ -47,6 +47,7 @@ const canVote = userAge() < legalAge;
 Descriptive names are essential to any good code, 
 they allow programmers to read and understand code more easily
 
+[Go to index](#index)
 
 
 ## Numbers
@@ -68,6 +69,7 @@ const groupsCount = (usersCount / usersGroupCount) || 0;
 Printing or dealing with NaN always result in invalid or 
 unwanted results. Be relentlessly with NaN, DO NOT allow it in your code
 
+[Go to index](#index)
 
 
 ## Always handle exceptions
@@ -94,6 +96,7 @@ Handling exceptions must be part of your logic. Imagine having
 logic to deal with an operation when it goes as expected but have 
 nothing when it fails, ALWAYS HANDLE ALL YOUR CASES
 
+[Go to index](#index)
 
 
 ## Safely dealing with values
@@ -121,6 +124,7 @@ Lodash is a great library that handles all the incorrect cases
 for us, make great use of it. If in doubt, use Lodash, do
 not perform these validations yourself, they’re already written in the library
 
+[Go to index](#index)
 
 
 ## Components
@@ -153,6 +157,7 @@ Building components that do many things are hard to read,
 maintain and reuse. Be smart about it, create as many
 components as you want in order to not repeat ourselves
 
+[Go to index](#index)
 
 
 ## Functions with one purpose
@@ -179,6 +184,7 @@ function isPasswordValid(password) {
 #### 💡 WHY
 Creating small and simple functions allow programmers to easily read and re-use code
 
+[Go to index](#index)
 
 
 ## Indentation / code style
@@ -208,6 +214,7 @@ function foo() {
 This is a very notorious detail that help the code to be
 more readable and show the type of programmers we are
 
+[Go to index](#index)
 
 
 ## Do not abuse inlining
@@ -236,6 +243,7 @@ const nameOfUsersWhoCanVote = map(usersWhoCanVote, 'name');
 Abusing inline makes code harder to read and isn’t
 reusable, DO NOT do it, if in doubt, create a new function
 
+[Go to index](#index)
 
 
 ## 🔎 Linters / warnings
@@ -243,6 +251,7 @@ Always make sure your code throws no warnings or errors. Linters
 are excellent tools that prevent us from shooting ourselves in the foot,
 be smart about it, use them and take advantage of their suggestions!
 
+[Go to index](#index)
 
 
 ## 📋 Read the documentation
@@ -250,6 +259,7 @@ Always make sure to read the documentation of any component
 or library we’re using to come up with the best possible solution.
 DO NOT fix anything by forcing it or by pure luck
 
+[Go to index](#index)
 
 
 ## 👍 Cleaning ourselves up
@@ -257,6 +267,7 @@ Apply the boy scouts rule, “Always leave the campground cleaner than you found
 Every time you see code it can be improved and the
 change isn’t big, DO IT, clean it up!
 
+[Go to index](#index)
 
 
 ## ❤️ Conclusion
@@ -265,6 +276,7 @@ allow bad or low quality to represent us, that is not who I am nor the team I
 want to be involved with. Be relentlessly and do not allow poor
 results to represent you as a programmer
 
+[Go to index](#index)
 
 
 ## 😺 Contributing to this document
@@ -272,7 +284,8 @@ The point of this document it to promote best and good practices
 for coding. Is anything missing? please go ahead and suggest
 it so we can add it and thus, improve as a team. Thanks!
 
-
 > ___The best idea and implementation should always win___
 >
 > Mark Zuckerberg
+
+[Go to index](#index)
