@@ -32,18 +32,18 @@ give less than what you can really deliver
 ## Names
 Use descriptive names for your variables, methods and functions
 
-### ❌ DO NOT
+#### ❌ DO NOT
 ```js
 const x = userAge() < 18;
 ```
 
-### ✔️ DO
+#### ✔️ DO
 ```js
 const legalAge = 18;
 const canVote = userAge() < legalAge;
 ```
 
-### 💡 WHY
+#### 💡 WHY
 Descriptive names are essential to any good code, 
 they allow programmers to read and understand code more easily
 
@@ -52,19 +52,19 @@ they allow programmers to read and understand code more easily
 ## Numbers
 Treat any math operation as if the result could be NaN
 
-### ❌ DO NOT
+#### ❌ DO NOT
 ```js
 const groupsCount = getUsersCount() / getUsersGroupCount();
 ```
 
-### ✔️ DO
+#### ✔️ DO
 ```js
 const usersCount = getUsersCount();
 const usersGroupCount = getUsersGroupCount();
 const groupsCount = (usersCount / usersGroupCount) || 0;
 ```
 
-### 💡 WHY
+#### 💡 WHY
 Printing or dealing with NaN always result in invalid or 
 unwanted results. Be relentlessly with NaN, DO NOT allow it in your code
 
@@ -75,12 +75,12 @@ Any operation that can throw an exception must be handled properly.
 Remember, exceptions is just another operation that must be deal 
 with, otherwise our code is INCOMPLETE
 
-### ❌ DO NOT
+#### ❌ DO NOT
 ```js
 const parsedJson = JSON.parse(...);
 ```
 
-### ✔️ DO
+#### ✔️ DO
 ```js
 try {
     const parsedJson = JSON.parse(...);
@@ -89,7 +89,7 @@ try {
 }
 ```
 
-### 💡 WHY
+#### 💡 WHY
 Handling exceptions must be part of your logic. Imagine having 
 logic to deal with an operation when it goes as expected but have 
 nothing when it fails, ALWAYS HANDLE ALL YOUR CASES
@@ -101,14 +101,14 @@ Remember, any value in Javascript can be anything, DO NOT
 think you’re dealing with the correct one, ALWAYS make 
 use of Lodash to prevent incorrect cases
 
-### ❌ DO NOT
+#### ❌ DO NOT
 ```js
 function hasBankAccounts(bankAccounts) {
     return bankAccounts.length > 0;
 }
 ```
 
-### ✔️ DO
+#### ✔️ DO
 ```js
 import 'isEmpty' from 'lodash';
 function hasBankAccounts(bankAccounts) {
@@ -116,7 +116,7 @@ function hasBankAccounts(bankAccounts) {
 }
 ```
 
-### 💡 WHY
+#### 💡 WHY
 Lodash is a great library that handles all the incorrect cases
 for us, make great use of it. If in doubt, use Lodash, do
 not perform these validations yourself, they’re already written in the library
@@ -128,7 +128,7 @@ Create small and simple components that deal with one thing,
 and only ONE thing at a time. Think in terms of lego-blocks, allow
 them to be easily reusable and DO NOT make big components
 
-### ❌ DO NOT
+#### ❌ DO NOT
 ```js
 export default class MyComponent extends React.Component {
     buildUserNameField = () => <div>...</div>;
@@ -138,7 +138,7 @@ export default class MyComponent extends React.Component {
 }
 ```
 
-### ✔️ DO
+#### ✔️ DO
 ```js
 import * as helper from '...';
 export default class MyComponent extends React.Component {
@@ -148,7 +148,7 @@ export default class MyComponent extends React.Component {
 }
 ```
 
-### 💡 WHY
+#### 💡 WHY
 Building components that do many things are hard to read,
 maintain and reuse. Be smart about it, create as many
 components as you want in order to not repeat ourselves
@@ -158,7 +158,7 @@ components as you want in order to not repeat ourselves
 ## Functions with one purpose
 Write small and simple functions that do one thing well, and only one thing
 
-### ❌ DO NOT
+#### ❌ DO NOT
 ```js
 function isPasswordValid(password) {
     createUser(); // Creating a user even tho the function name says it's validating a password?
@@ -167,7 +167,7 @@ function isPasswordValid(password) {
 }
 ```
 
-### ✔️ DO
+#### ✔️ DO
 ```js
 import 'size' from 'lodash/size';
 function isPasswordValid(password) {
@@ -176,7 +176,7 @@ function isPasswordValid(password) {
 }
 ```
 
-### 💡 WHY
+#### 💡 WHY
 Creating small and simple functions allow programmers to easily read and re-use code
 
 
@@ -185,7 +185,7 @@ Creating small and simple functions allow programmers to easily read and re-use 
 Be organized when writing code, place spaces and make your code clean and
 always follow the code style used in each specific project
 
-### ❌ DO NOT
+#### ❌ DO NOT
 ```js
 function foo() {
     const x = 42
@@ -195,7 +195,7 @@ function foo() {
 }
 ```
 
-### ✔️ DO
+#### ✔️ DO
 ```js
 function foo() {
     const x = 42;
@@ -204,7 +204,7 @@ function foo() {
 }
 ```
 
-### 💡 WHY
+#### 💡 WHY
 This is a very notorious detail that help the code to be
 more readable and show the type of programmers we are
 
@@ -213,12 +213,12 @@ more readable and show the type of programmers we are
 ## Do not abuse inlining
 DO NOT abuse inlining
 
-### ❌ DO NOT
+#### ❌ DO NOT
 ```js
 const x = map(filter(users, (user) => user.age > 18), 'name');
 ```
 
-### ✔️ DO
+#### ✔️ DO
 ```js
 const filterUsersWhoCanVote = (users) => {
     const ageToVote = 18;
@@ -232,7 +232,7 @@ const usersWhoCanVote = filterUsersWhoCanVote(users);
 const nameOfUsersWhoCanVote = map(usersWhoCanVote, 'name');
 ```
 
-### 💡 WHY
+#### 💡 WHY
 Abusing inline makes code harder to read and isn’t
 reusable, DO NOT do it, if in doubt, create a new function
 
@@ -273,5 +273,6 @@ for coding. Is anything missing? please go ahead and suggest
 it so we can add it and thus, improve as a team. Thanks!
 
 
-> The best idea and implementation should always win
-> - Mark Zuckerberg
+> ___The best idea and implementation should always win___
+>
+> Mark Zuckerberg
